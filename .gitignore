@@ -1,0 +1,56 @@
+# Dependências
+node_modules/
+.pnp
+.pnp.js
+
+# Produção
+build/
+dist/
+.serverless/
+
+# Arquivos de ambiente
+.env
+.env.local
+.env.*.local
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Editor
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Arquivos do sistema operacional
+.DS_Store
+Thumbs.db
+
+# Cache
+.cache/
+.temp/
+.tmp/
+
+# Testes
+coverage/
+.nyc_output/
+
+# Serverless
+.serverless/
+.serverless_plugins/
+
+# Vite
+*.local
+
+# TypeScript
+*.tsbuildinfo
+
+# Arquivos temporários
+*.bak
+*.swp
+*~
