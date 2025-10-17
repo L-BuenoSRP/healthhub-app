@@ -1,5 +1,6 @@
-import { Home } from "lucide-react";
+import { FileText, Home, Image, VolumeX } from "lucide-react";
 import React, { useState } from "react";
+import AISpeech from "../AiSpeech";
 import DoctorDashboard from "../DoctorDashboard";
 import { MenuItem } from "../SharedComponents";
 
@@ -8,6 +9,10 @@ const DoctorView = ({ userRole }) => {
 
   const renderContent = () => {
     switch (activeTab) {
+      case "dashboard":
+        return <DoctorDashboard />;
+      case "speech":
+        return <AISpeech />;
       default:
         return <DoctorDashboard />;
     }
@@ -26,6 +31,12 @@ const DoctorView = ({ userRole }) => {
             label="Dashboard"
             active={activeTab === "dashboard"}
             onClick={() => setActiveTab("dashboard")}
+          />
+          <MenuItem
+            icon={VolumeX}
+            label="AI Speech"
+            active={activeTab === "speech"}
+            onClick={() => setActiveTab("speech")}
           />
         </div>
       </nav>

@@ -48,4 +48,12 @@ export const appointmentService = {
   deleteAppointment: (id) => api.delete(`/appointments/${id}`),
 };
 
+export const aiInteractionService = {
+  getAIInteractions: (params) => api.get("/ai-interactions", params),
+  getAIInteraction: (id) => api.get(`/ai-interactions/${id}`),
+  createAIInteraction: (data) => api.post("/ai-interactions", data),
+  textToSpeech: (text, language) =>
+    api.post("/ai-interactions/text-to-speech", { text, language }),
+};
+
 export default api;

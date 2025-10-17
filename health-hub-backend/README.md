@@ -9,9 +9,10 @@ This guide provides instructions for setting up and deploying the HealthHub back
   - [Prerequisites](#prerequisites)
   - [Project Structure](#project-structure)
   - [Installation](#installation)
-  - [Configuration](#configuration)
   - [Deployment](#deployment)
   - [Service-Specific Notes](#service-specific-notes)
+    - [AI Interaction Service](#ai-interaction-service)
+    - [Other Services](#other-services)
   - [Security Notes](#security-notes)
 
 ## Prerequisites
@@ -20,7 +21,7 @@ Ensure you have the following installed on your system:
 
 - Node.js (v14 or later)
 - npm (v6 or later)
-- Serverless Framework CLI (v3) (`npm install -g serverless@3`)
+- Serverless Framework CLI (`npm install -g serverless`)
 - AWS CLI (configured with your AWS credentials)
 
 ## Project Structure
@@ -33,6 +34,7 @@ health-hub-backend/
 ├── node_modules/
 ├── src/
 │   └── services/
+│       ├── ai-interaction-service/
 │       ├── appointment-service/
 │       ├── doctor-service/
 │       ├── patient-service/
@@ -67,10 +69,6 @@ Each service in the `src/services/` directory has its own `serverless.yml` confi
    done
    ```
 
-## Configuration
-
-Each service has its own `serverless.yml` file that needs to be configured with the appropriate environment variables and credentials. Here are the specific requirements for each service:
-
 ## Deployment
 
 Before deploying, ensure that all the necessary credentials and environment variables are properly set in each service's `serverless.yml` file.
@@ -82,6 +80,12 @@ npm run deploy
 ```
 
 ## Service-Specific Notes
+
+### AI Interaction Service
+
+- Integrates with text-to-speech capabilities
+
+### Other Services
 
 - appointment-service: Manages appointment scheduling and retrieval
 - doctor-service: Handles doctor-related operations

@@ -1,7 +1,8 @@
 services:
-  # do not change this order, the user-service need to be the first one
   user-service:
     path: src/services/user-service
+  ai-interaction-service:
+    path: src/services/ai-interaction-service
   appointment-service:
     path: src/services/appointment-service
   doctor-service:
